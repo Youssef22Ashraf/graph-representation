@@ -12,6 +12,11 @@
     - [Mathematical Definition](#mathematical-definition)
   - [Linked Representation of Graph](#linked-representation-of-graph)
     - [Mathematical Definition](#mathematical-definition)
+-  [Code Explanation](#code-explanation)
+    1. [Library Imports](#library-imports)
+    2. [Global Variable Initialization](#global-variable-initialization)
+    3. [Function Definitions](#function-definitions)
+    4. [Execution](#execution)
 - [Results](#results)
   - [Pros & Cons of Sequential Representation](#pros--cons-of-sequential-representation)
   - [Pros & Cons of Linked Representation](#pros--cons-of-linked-representation)
@@ -53,6 +58,28 @@ An adjacency matrix is a way to show which vertices of a network are close to wh
 #### Mathematical Definition
 
 An adjacency list in graph theory is a list representation of every edge or arc in a graph. If the graph is directed, each entry is a tuple of two nodes, one of which represents the source node and the other the destination node of the relevant arc. If the graph is undirected, each entry is a set (or multiset) of two nodes representing the two ends of the corresponding edge.
+
+## Code Explanation
+
+### Library Imports
+- **defaultdict**: A subclass of the built-in dict class that provides a default value for a nonexistent key.
+- **networkx (nx)**: A library for creating and manipulating graphs.
+- **pyplot (plt)**: A submodule of the matplotlib library for creating static, animated, and interactive visualizations.
+- **List, Tuple**: Type hints for lists and tuples.
+
+### Global Variable Initialization
+- **paths**: Initialized to 0, this variable tracks the number of paths in the graph.
+
+### Function Definitions
+1. **new_edge**: Adds a new edge to the graph represented by the adjacency list. Increments the paths variable.
+2. **list_to_matrix**: Converts the graph from an adjacency list representation to an adjacency matrix representation.
+3. **print_matrix_graph**: Prints the adjacency matrix graphically.
+4. **GraphVisualization**: Class for visualizing the graph using networkx and matplotlib.
+5. **convert**: Converts an adjacency matrix to an adjacency list.
+6. **main**: The main function that initializes the graph, adds edges, converts the graph, prints the graph, and visualizes it.
+
+### Execution
+- Calls the main function if the script is run directly.
 
 ## Results
 
